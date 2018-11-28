@@ -29,7 +29,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="PagIni">Start Bootstrap</a>
+      <a class="navbar-brand mr-1" href="PagIni">Gestão Desempenho</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -117,12 +117,12 @@
         <li class="nav-item">
           <a class="nav-link" href="charts">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
+            <span>Gráficos</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="tables">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <span>Tabelas</span></a>
         </li>
       </ul>
 
@@ -150,7 +150,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Your Website 2018</span>
+              <span>Copyright © Rodobens 2018</span>
             </div>
           </div>
         </footer>
@@ -179,7 +179,7 @@
           <div class="modal-body">Selecione "Logout" abaixo se você estiver pronto para encerrar a sessão.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="index">Logout</a>
+            <a class="btn btn-primary" href="Logout">Logout</a>
           </div>
         </div>
       </div>

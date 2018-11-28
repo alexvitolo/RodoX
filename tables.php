@@ -29,7 +29,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="PagIni">Start Bootstrap</a>
+      <a class="navbar-brand mr-1" href="PagIni">Gestão Desempenho</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -98,6 +98,8 @@
             <span>Dashboard</span>
           </a>
         </li>
+
+        <!--
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
@@ -105,24 +107,25 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="index">Login</a>
-            <a class="dropdown-item" href="register">Register</a>
-            <a class="dropdown-item" href="forgot-password">Forgot Password</a>
+            <a class="dropdown-item" href="index.php">Login</a>
+            <a class="dropdown-item" href="register.php">Register</a>
+            <a class="dropdown-item" href="forgot-password.php">Forgot Password</a>
             <div class="dropdown-divider"></div>
             <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404">404 Page</a>
-            <a class="dropdown-item" href="blank">Blank Page</a>
+            <a class="dropdown-item" href="404.php">404 Page</a>
+            <a class="dropdown-item" href="blank.php">Blank Page</a>
           </div>
+        </li> -->
+        
+        <li class="nav-item">
+          <a class="nav-link" href="charts.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Gráficos</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="charts">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="tables">
+          <a class="nav-link" href="tables.php">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <span>Tabelas</span></a>
         </li>
       </ul>
 
@@ -135,7 +138,7 @@
             <li class="breadcrumb-item">
               <a href="#">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Tables</li>
+            <li class="breadcrumb-item active">Overview</li>
           </ol>
 
           <!-- DataTables Example -->
@@ -641,7 +644,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Your Website 2018</span>
+              <span>Copyright © Rodobens 2018</span>
             </div>
           </div>
         </footer>
@@ -670,7 +673,7 @@
           <div class="modal-body">Selecione "Logout" abaixo se você estiver pronto para encerrar a sessão.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="index">Logout</a>
+            <a class="btn btn-primary" href="Logout">Logout</a>
           </div>
         </div>
       </div>

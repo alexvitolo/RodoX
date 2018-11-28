@@ -1,3 +1,53 @@
+<?php
+
+$USERVALIDA = $_POST['USERVALIDA'];
+
+$SENHAVALIDA = $_POST['SENHAVALIDA'];
+
+
+function valida_ldap($srv, $usr, $pwd){
+    $ldap_server = $srv;
+    $auth_user = $usr;
+    $auth_pass = $pwd;
+
+    // Tenta se conectar com o servidor
+    if (!($connect = @ldap_connect($ldap_server))) {
+        return FALSE;
+    }
+
+    // Tenta autenticar no servidor
+    if (!($bind = @ldap_bind($connect, $auth_user, $auth_pass))) {
+        // se não validar retorna false
+        return FALSE;
+    }else {
+        // se validar retorna true
+        return TRUE;
+    }
+
+}
+
+// EXEMPLO do uso dessa função
+$server = "10.255.220.64"; //IP ou nome do servidor
+$dominio = "@rodobens"; //Dominio Ex: @gmail.com
+$user = $USERVALIDA.$dominio;
+$pass = $SENHAVALIDA;
+
+if (valida_ldap($server, $user, $pass)) {
+    session_start();
+    $_SESSION['USUARIO'] = $USERVALIDA;
+    $_SESSION['ACESSO'] = 0; //no access diferente now
+    $_SESSION['SessionOwnder'] = md5('seg'.$_SERVER['REMOTE_ADDR'].$_SERVER['HTTP_USER_AGENT']);
+
+}else {
+    echo  '<script>alert("Usuário ou Senha Inválidos!");</script>';
+    echo  '<script type="text/javascript"> window.location.href = "http://10.195.180.73/RodoX/index"  </script>'; 
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -106,7 +156,7 @@
 
                  setTimeout(function() {
                      location.href = "../RodoX/PagIni";
-                }, 6500);
+                }, 5600);
                 
                 enterButton.on('click', function(e) {
                     e.preventDefault();

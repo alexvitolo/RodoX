@@ -1,5 +1,21 @@
 <?php
 
+session_cache_expire(40);
+session_start();
+
+// validação session e tipo de acesso usuário
+if ( ! isset( $_SESSION['USUARIO'] ) && ! isset( $_SESSION['ACESSO'] ) ) {
+    // Ação a ser executada: mata o script e manda uma mensagem
+   echo  '<script type="text/javascript"> window.location.href = "http://10.195.180.73/RodoX/index"  </script>'; 
+}
+
+// validação origem da sessão
+$tokenUsuario = md5('seg'.$_SERVER['REMOTE_ADDR'].$_SERVER['HTTP_USER_AGENT']);
+
+if($_SESSION['SessionOwnder'] != $tokenUsuario ){
+   echo  '<script type="text/javascript"> window.location.href = "http://10.195.180.73/RodoX/index"  </script>'; 
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -105,6 +121,8 @@
             <span>Dashboard</span>
           </a>
         </li>
+
+        <!--
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
@@ -112,22 +130,23 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="index">Login</a>
-            <a class="dropdown-item" href="register">Register</a>
-            <a class="dropdown-item" href="forgot-password">Forgot Password</a>
+            <a class="dropdown-item" href="index.php">Login</a>
+            <a class="dropdown-item" href="register.php">Register</a>
+            <a class="dropdown-item" href="forgot-password.php">Forgot Password</a>
             <div class="dropdown-divider"></div>
             <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404">404 Page</a>
-            <a class="dropdown-item" href="blank">Blank Page</a>
+            <a class="dropdown-item" href="404.php">404 Page</a>
+            <a class="dropdown-item" href="blank.php">Blank Page</a>
           </div>
-        </li>
+        </li>   -->
+        
         <li class="nav-item">
-          <a class="nav-link" href="charts">
+          <a class="nav-link" href="charts.php">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Grágicos</span></a>
+            <span>Gráficos</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="tables">
+          <a class="nav-link" href="tables.php">
             <i class="fas fa-fw fa-table"></i>
             <span>Tabelas</span></a>
         </li>
@@ -142,7 +161,7 @@
             <li class="breadcrumb-item">
               <a href="#">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Overview Cognos BI</li>
+            <li class="breadcrumb-item active">Overview</li>
           </ol>
 
           <!-- Area Chart -->
@@ -220,7 +239,7 @@
                   </tfoot>
                   <tbody>
                     <tr>
-                      <td>Alex Todobens</td>
+                      <td>Vitolo Rodobens</td>
                       <td>Test</td>
                       <td>Rio Preto</td>
                       <td>33</td>
@@ -228,7 +247,7 @@
                       <td>$320,80</td>
                     </tr>
                       <tr>
-                      <td>Alex Todobens</td>
+                      <td>Vitolo Rodobens</td>
                       <td>Test</td>
                       <td>Rio Preto</td>
                       <td>33</td>
@@ -278,7 +297,7 @@
           <div class="modal-body">Selecione "Logout" abaixo se você estiver pronto para encerrar a sessão.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="index">Logout</a>
+            <a class="btn btn-primary" href="Logout">Logout</a>
           </div>
         </div>
       </div>
@@ -292,7 +311,7 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
     <script src="vendor/datatables/jquery.dataTables.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 

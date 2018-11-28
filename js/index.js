@@ -27,17 +27,12 @@ $(document).ready(function() {
     setTimeout(function() {
       $(that).addClass("success");
       setTimeout(function() {
-        $app.show();
-        $app.css("top");
-        $app.addClass("active");
       }, submitPhase2 - 70);
       setTimeout(function() {
-        $login.hide();
-        $login.addClass("inactive");
         animating = false;
         $(that).removeClass("success processing");
-      }, submitPhase2);
-    }, submitPhase1);
+      }, submitPhase2-300);
+    }, submitPhase1-150);
   });
   
   $(document).on("click", ".app__logout", function(e) {
