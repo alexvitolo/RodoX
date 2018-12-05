@@ -1,0 +1,70 @@
+http://server-name/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/main.xts&startwel=yes&h_CAM_action=logonAs&CAMNamespace=NAMESPACE_ID&CAMUsername=MyUsername&CAMPassword=MyPassword&m=portal/cc.xts
+
+
+
+tabela dinamica rotulos de linha gerencial contabil total geral- tipo analise descricao
+
+
+análise :   ajuste gerencias
+            despesas ADM
+
+
+
+
+
+
+alt + ;
+
+
+
+01 orçamento e meta ---- prçamentos --- 2019 ---- 1.original ---- (unidades de negocios)
+
+													 		 ----- planejamentos --- projeção (DRE)
+
+
+
+
+
+
+
+T:\Financas\Resultado-Desempenho\01-ORÇAMENTO E METAS\Orçamento\2019\1. Original\1-Automóveis + Seminovos\5-PPR
+T:\Financas\Resultado-Desempenho\02-DEMONSTRATIVOS FINANCEIROS\7 - DF´s Estruturação\9-DRE\1 - Contábil
+
+
+
+http://10.255.200.1:1000/fgtauth?04a207985a07b2bd
+
+
+
+
+
+CONNECT BANCO NETEZZA
+
+RODSRR01HMPD02
+
+
+
+
+
+
+---- oka ----
+
+\1-Automóveis + Seminovos\5-PPR                  OK
+
+\2-Veículos Comerciais\5-PPR                     OK
+
+\2-Veículos Comerciais\6-Outros Resultados       OK
+
+\4-Corretora de Seguros\5-PPR                    OK 
+
+\4-Corretora de Seguros\6-Outros Resultados      OK
+
+\6-Locação + Locadora\6-Outros Resultados        OK 
+
+\6-Locação + Locadora\7-Resultado Financeiro     OK
+
+\6-Locação + Locadora\3-Despesas                 HARD       
+
+\6-Locação + Locadora\9-IR-CSLL                  OK
+
+\3- Consorcio\9-IR-CSLL                          OK
